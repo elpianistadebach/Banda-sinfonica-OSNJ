@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Banda Sinfónica OSNJ</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header>
+    <div class="overlay">
+      <h1>Inicio de Sesión o registro</h1>
+      <p>Vincula tu cuenta con la Banda Sinfónica OSNJ</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../historia/index.html">Historia</a></li>
+      <li><a href="../logros/index.html">Logros</a></li>
+      <li><a href="../galeria/index.html">Galería</a></li>
+      <li><a href="../contacto/index.html">Contacto</a></li>
+      <li><a href="../Curso/index.html">Curso</a></li>
+      <li><a href="../formularios/index.html">Formularios de Inscripción</a></li>
+      <li><a href="../sesion/index.html">Inicio de Sesión</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="auth-shell">
+      <div class="auth-card">
+        <h2>Iniciar sesión</h2>
+        <form class="auth-form" action="procesar_sesion.php" method="post">
+          <input type="hidden" name="accion" value="login">
+
+          <label>
+            <span>Correo electrónico</span>
+            <input type="email" name="correo_electronico" placeholder="correo@ejemplo.com" required>
+          </label>
+
+          <label>
+            <span>Contraseña</span>
+            <input type="password" name="contrasena" placeholder="••••••••" required>
+          </label>
+
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <div class="auth-card">
+        <h2>Regístrate</h2>
+        <form class="auth-form" action="procesar_sesion.php" method="post">
+          <input type="hidden" name="accion" value="registro">
+
+          <label>
+            <span>Nombre completo</span>
+            <input type="text" name="nombre_completo" placeholder="Tu nombre" required>
+          </label>
+
+          <label>
+            <span>Correo electrónico</span>
+            <input type="email" name="correo_electronico" placeholder="correo@ejemplo.com" required>
+          </label>
+
+          <label>
+            <span>Contraseña</span>
+            <input type="password" name="contrasena" placeholder="Crea una contraseña" required>
+          </label>
+
+          <label>
+            <span>Confirmar contraseña</span>
+            <input type="password" name="confirmar_contrasena" placeholder="Repite la contraseña" required>
+          </label>
+
+          <button type="submit">Registrarme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Banda Sinfónica Padre Ítalo - Obra Salesiana del Niño Jesús</p>
+  </footer>
+</body>
+</html>
