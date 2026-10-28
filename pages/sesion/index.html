@@ -31,17 +31,19 @@
     <section class="auth-shell">
       <div class="auth-card">
         <h2>Iniciar sesión</h2>
-        <form class="auth-form" action="procesar_sesion.php" method="post">
-          <input type="hidden" name="accion" value="login">
-
+        <!-- 1. Se eliminó action y method, se añadió el ID -->
+        <form class="auth-form" id="formulario_login">
+          
           <label>
             <span>Correo electrónico</span>
-            <input type="email" name="correo_electronico" placeholder="correo@ejemplo.com" required>
+            <!-- Se añadió id="correo_electronico_login" -->
+            <input type="email" id="correo_electronico_login" name="correo_electronico" placeholder="correo@ejemplo.com" required>
           </label>
 
           <label>
             <span>Contraseña</span>
-            <input type="password" name="contrasena" placeholder="••••••••" required>
+            <!-- Se añadió id="contrasena_login" -->
+            <input type="password" id="contrasena_login" name="contrasena" placeholder="••••••••" required>
           </label>
 
           <button type="submit">Entrar</button>
@@ -50,27 +52,31 @@
 
       <div class="auth-card">
         <h2>Regístrate</h2>
-        <form class="auth-form" action="procesar_sesion.php" method="post">
-          <input type="hidden" name="accion" value="registro">
-
+        <!-- 2. Se eliminó action y method, se añadió el ID -->
+        <form class="auth-form" id="formulario_registro">
+          
           <label>
             <span>Nombre completo</span>
-            <input type="text" name="nombre_completo" placeholder="Tu nombre" required>
+            <!-- Se añadió id="nombre_completo" -->
+            <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Tu nombre" required>
           </label>
 
           <label>
             <span>Correo electrónico</span>
-            <input type="email" name="correo_electronico" placeholder="correo@ejemplo.com" required>
+            <!-- Se añadió id="correo_electronico_reg" para diferenciarlo del login -->
+            <input type="email" id="correo_electronico_reg" name="correo_electronico" placeholder="correo@ejemplo.com" required>
           </label>
 
           <label>
             <span>Contraseña</span>
-            <input type="password" name="contrasena" placeholder="Crea una contraseña" required>
+            <!-- Se añadió id="contrasena_reg" para diferenciarlo del login -->
+            <input type="password" id="contrasena_reg" name="contrasena" placeholder="Crea una contraseña" required>
           </label>
 
           <label>
             <span>Confirmar contraseña</span>
-            <input type="password" name="confirmar_contrasena" placeholder="Repite la contraseña" required>
+            <!-- Se añadió id="confirmar_contrasena" -->
+            <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Repite la contraseña" required>
           </label>
 
           <button type="submit">Registrarme</button>
@@ -82,5 +88,8 @@
   <footer>
     <p>&copy; 2025 Banda Sinfónica Padre Ítalo - Obra Salesiana del Niño Jesús</p>
   </footer>
+
+  <!-- 3. Se vinculó el archivo JS como módulo al final del body -->
+  <script type="module" src="auth.js"></script>
 </body>
 </html>
